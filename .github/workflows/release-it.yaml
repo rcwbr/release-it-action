@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v4.1.7
       -
         name: Release-it
-        uses: "rcwbr/release-it-action/core@${{ github.ref_name }}"
+        uses: "rcwbr/release-it-action/core@${{ env.GITHUB_REF_NAME }}"
