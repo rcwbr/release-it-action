@@ -1,4 +1,4 @@
-name: Build Docker images
+name: Push workflow
 on: [push]
 jobs:
   build-docker-images:
@@ -22,3 +22,15 @@ jobs:
       -
         name: Docker Bake
         uses: docker/bake-action@v5.7.0
+  release-it-prerelease:
+    name: Release-it prerelease
+    runs-on: ubuntu-24.04
+    needs: [build-docker-images]
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4.1.7
+      -
+        name: Release-it
+        # Include action by relative path to always use the current version
+        uses: ./rcwbr/release-it-action/core
