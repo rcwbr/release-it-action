@@ -1,0 +1,6 @@
+name: Release-it
+author: Eric Weber (@rcwbr)
+description: Release automation using release-it
+runs:
+  using: docker
+  image: 'docker://ghcr.io/rcwbr/release-it-action-core:1-define-initial-action'
