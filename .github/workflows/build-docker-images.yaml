@@ -1,7 +1,8 @@
-name: PR workflow
-on: [pull_request]
+name: Build Docker images
+on: [push]
 jobs:
-  Build-Docker-Images:
+  build-docker-images:
+    name: Build Docker images
     runs-on: ubuntu-24.04
     permissions:
       packages: write
