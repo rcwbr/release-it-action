@@ -3,4 +3,4 @@ author: Eric Weber (@rcwbr)
 description: Release automation using release-it
 runs:
   using: docker
-  image: 'docker://ghcr.io/rcwbr/release-it-action-core:${{ github.action_ref }}'
+  image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ github.action_ref }}"

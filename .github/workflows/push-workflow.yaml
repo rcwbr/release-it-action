@@ -25,7 +25,7 @@ jobs:
   release-it-prerelease:
     name: Release-it prerelease
     runs-on: ubuntu-24.04
-    needs: [build-docker-images]
+    # needs: [build-docker-images]
     steps:
       -
         name: Checkout
