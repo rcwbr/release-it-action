@@ -7,6 +7,6 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4.1.7
-      -
-        name: Release-it
-        uses: rcwbr/release-it-action/core@1-define-initial-action
+      # -
+      #   name: Release-it
+      #   uses: rcwbr/release-it-action/core@1-define-initial-action
