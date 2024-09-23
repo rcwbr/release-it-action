@@ -4,10 +4,11 @@ jobs:
   release-it-prerelease:
     name: Release-it prerelease
     runs-on: ubuntu-24.04
+    needs: [build-docker-images]
     steps:
       -
         name: Checkout
         uses: actions/checkout@v4.1.7
       -
         name: Release-it
-        uses: rcwbr/release-it-action/core@1-define-initial-action
+        uses: rcwbr/release-it-action/core@${{ github.ref_name }}
