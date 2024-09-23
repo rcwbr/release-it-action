@@ -1,0 +1,12 @@
+name: Release-it
+on: [push]
+jobs:
+  release-it-prerelease:
+    name: Release-it prerelease
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4.1.7
+      -
+        name: Release-it
+        uses: rcwbr/release-it-action/core@1-define-initial-action
