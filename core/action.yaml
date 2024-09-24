@@ -1,22 +1,17 @@
-name: Release-it
-author: Eric Weber (@rcwbr)
-description: Release automation using release-it
-# Potential workaround, see https://github.com/actions/runner/issues/2473
+name: 'GHA Test Runner 🧪'
+description: 'Run test cases for different languages and frameworks'
+author: 'Jaynath Ray'
 inputs:
-  # action_ref:
-  #   default: "asdf"
-  # bashVersion:
-  #   required: true
-  #   default: "5.2.32"
-  bashVersion:
+  language:
+    description: 'The programming language of the application (node or python)'
     required: true
-    default: "file"
-#     default: ${{ github.action_ref }}
+    default: 'node' # Set a default value (you can change this)
+
 runs:
-  using: docker
-  # env:
-  #   action_ref: ${{ github.action_ref }}
-  # image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ env.action_ref }}"
-  image: Docker${{ inputs.bashVersion }}
-  # args:
-  #   - "echo ${{ env.GITHUB_ACTION_REF }}"
+  using: 'docker'
+  image: 'Dockerfile.${{ inputs.language }}'
+  env:
+    APP_LANGUAGE: ${{ inputs.language }}
+branding:
+  icon: 'shield'
+  color: 'green'
