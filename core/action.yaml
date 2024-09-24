@@ -12,4 +12,4 @@ runs:
   # image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ env.action_ref }}"
   image: docker://bash:latest
   args:
-    - "env"
+    - "echo ${{ env.GITHUB_ACTION_REF }}"
