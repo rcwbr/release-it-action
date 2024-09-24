@@ -28,7 +28,7 @@ jobs:
     steps:
       -
         name: Lint
-        uses: jackofallops/action-tfprovider-linting
+        uses: jackofallops/action-tfprovider-linting@docker-alpha
   release-it-prerelease:
     name: Release-it prerelease
     runs-on: ubuntu-24.04
