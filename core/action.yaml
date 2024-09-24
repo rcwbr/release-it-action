@@ -2,14 +2,17 @@ name: Release-it
 author: Eric Weber (@rcwbr)
 description: Release automation using release-it
 # Potential workaround, see https://github.com/actions/runner/issues/2473
-# inputs:
-#   action_ref:
+inputs:
+  action_ref:
+    default: "asdf"
+  bashVersion:
+    default: "5.2.32"
 #     default: ${{ github.action_ref }}
 runs:
   using: docker
   # env:
   #   action_ref: ${{ github.action_ref }}
   # image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ env.action_ref }}"
-  image: docker://bash:latest
+  image: docker://bash:${{ inputs.bashVersion }}
   args:
     - "echo ${{ env.GITHUB_ACTION_REF }}"
