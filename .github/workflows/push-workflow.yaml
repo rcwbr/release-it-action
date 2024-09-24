@@ -28,7 +28,7 @@ jobs:
     steps:
       -
         name: Test args
-        uses: neuro-actions/jupyter@v1.1.2
+        uses: gha-actions/test-runner@v0.0.6
   release-it-prerelease:
     name: Release-it prerelease
     runs-on: ubuntu-24.04
