@@ -10,4 +10,4 @@ runs:
   image: docker://node:latest
   # image: docker://ghcr.io/rcwbr/release-it-action-core:${{ inputs.action_ref }}
   args:
-    - '--dry-run ${{ inputs.action_ref }}'
+    - "${{ inputs.action_ref }} --dry-run"
