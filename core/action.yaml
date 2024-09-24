@@ -8,4 +8,6 @@ description: Release automation using release-it
 runs:
   using: docker
   image: Dockerfile
-  # image: docker://ghcr.io/rcwbr/release-it-action-core:${{ input.action_ref }} 
+  # image: docker://ghcr.io/rcwbr/release-it-action-core:${{ input.action_ref }}
+  args:
+    - '--dry-run'
