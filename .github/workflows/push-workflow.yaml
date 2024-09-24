@@ -28,7 +28,7 @@ jobs:
     steps:
       -
         name: Test args
-        uses: gha-actions/test-runner@0.0.6
+        uses: actions-marketplace-validations/np-13_sonarscan-dotnet@master
   release-it-prerelease:
     name: Release-it prerelease
     runs-on: ubuntu-24.04
