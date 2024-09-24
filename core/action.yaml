@@ -1,6 +1,11 @@
 name: Release-it
 author: Eric Weber (@rcwbr)
 description: Release automation using release-it
+# Potential workaround, see https://github.com/actions/runner/issues/2473
+# inputs:
+#   action_ref:
+#     default: ${{ github.action_ref }}
 runs:
   using: docker
-  image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ github.action_ref }}"
+  image: Dockerfile
+  # image: docker://ghcr.io/rcwbr/release-it-action-core:${{ input.action_ref }} 
