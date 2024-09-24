@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       -
-        name: Lint
-        uses: jackofallops/action-tfprovider-linting@docker-alpha
+        name: Test args
+        uses: neuro-actions/jupyter@v1.1.2
   release-it-prerelease:
     name: Release-it prerelease
     runs-on: ubuntu-24.04
