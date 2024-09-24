@@ -7,7 +7,6 @@ inputs:
     default: ${{ github.action_ref }}
 runs:
   using: docker
-  image: docker://node:latest
-  # image: docker://ghcr.io/rcwbr/release-it-action-core:${{ inputs.action_ref }}
+  image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ inputs.action_ref }}"
   args:
     - "${{ inputs.action_ref }} --dry-run"
