@@ -5,15 +5,18 @@ description: Release automation using release-it
 inputs:
   # action_ref:
   #   default: "asdf"
+  # bashVersion:
+  #   required: true
+  #   default: "5.2.32"
   bashVersion:
     required: true
-    default: "5.2.32"
+    default: "file"
 #     default: ${{ github.action_ref }}
 runs:
   using: docker
   # env:
   #   action_ref: ${{ github.action_ref }}
   # image: "docker://ghcr.io/rcwbr/release-it-action-core:${{ env.action_ref }}"
-  image: docker://bash:${{ inputs.bashVersion }}
+  image: Docker${{ inputs.bashVersion }}
   # args:
   #   - "echo ${{ env.GITHUB_ACTION_REF }}"
