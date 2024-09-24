@@ -3,9 +3,10 @@ author: Eric Weber (@rcwbr)
 description: Release automation using release-it
 # Potential workaround, see https://github.com/actions/runner/issues/2473
 inputs:
-  action_ref:
-    default: "asdf"
+  # action_ref:
+  #   default: "asdf"
   bashVersion:
+    required: true
     default: "5.2.32"
 #     default: ${{ github.action_ref }}
 runs:
