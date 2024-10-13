@@ -1,0 +1,8 @@
+name: Release-it with Conventional Changelog
+author: Eric Weber (@rcwbr)
+description: Release automation using release-it and conventional-changelog
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - "--dry-run"
