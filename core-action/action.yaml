@@ -1,0 +1,14 @@
+name: Release-it
+author: Eric Weber (@rcwbr)
+description: Release automation using release-it
+inputs:
+  image-version:
+    description: Version of the release-it-docker image.
+    required: false
+    # default: 0.1.0 TODO convert ref to semver
+    default: main
+runs:
+  using: docker
+  image: "docker://ghcr.io/rcwbr/release-it-docker:${{ inputs.image-version }}"
+  args:
+    - "--dry-run"
