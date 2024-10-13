@@ -1,0 +1,45 @@
+{
+  "git": {
+    "commit": false
+  },
+  "github": {
+    "release": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": ":rocket: Features"
+          },
+          {
+            "type": "fix",
+            "section": ":beetle: Bug Fixes"
+          },
+          {
+            "type": "ci",
+            "section": ":robot: CI/CD"
+          },
+          {
+            "type": "docs",
+            "section": ":page_facing_up: Documentation"
+          },
+          {
+            "type": "test",
+            "section": ":test_tube: Tests"
+          },
+          {
+            "type": "build",
+            "section": ":package: Build"
+          },
+          {
+            "type": "chore",
+            "hidden": true
+          },
+        ]
+      }
+    }
+  }
+}
