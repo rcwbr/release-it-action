@@ -1,17 +1,14 @@
-name: 'GHA Test Runner 🧪'
-description: 'Run test cases for different languages and frameworks'
-author: 'Jaynath Ray'
+name: Release-it
+author: Eric Weber (@rcwbr)
+description: Release automation using release-it
 inputs:
-  language:
-    description: 'The programming language of the application (node or python)'
-    required: true
-    default: 'node' # Set a default value (you can change this)
-
+  image-version:
+    description: Version of the release-it-docker image.
+    required: false
+    # default: 0.1.0 TODO convert ref to semver
+    default: main
 runs:
-  using: 'docker'
-  image: 'Dockerfile.${{ inputs.language }}'
-  env:
-    APP_LANGUAGE: ${{ inputs.language }}
-branding:
-  icon: 'shield'
-  color: 'green'
+  using: docker
+  image: "docker://ghcr.io/rcwbr/release-it-docker:${{ inputs.image-version }}"
+  args:
+    - "--dry-run"
