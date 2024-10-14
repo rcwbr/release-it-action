@@ -16,7 +16,7 @@
           },
           {
             "type": "fix",
-            "section": ":beetle: Bug Fixes"
+            "section": ":bug: Bug fixes"
           },
           {
             "type": "ci",
@@ -24,7 +24,7 @@
           },
           {
             "type": "docs",
-            "section": ":page_facing_up: Documentation"
+            "section": ":page_facing_up: Docs"
           },
           {
             "type": "test",
@@ -33,6 +33,10 @@
           {
             "type": "build",
             "section": ":package: Build"
+          },
+          {
+            "type": "style",
+            "section": ":broom: Style"
           },
           {
             "type": "chore",
