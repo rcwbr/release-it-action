@@ -5,4 +5,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - "--dry-run"
+    - "--dry-run --config /.release-it.json"
