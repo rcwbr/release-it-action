@@ -12,3 +12,5 @@ jobs:
         name: Release-it
         # Include action by relative path to always use the current version
         uses: ./conventional-changelog-action
+        with:
+          release-it-extra-args: --dry-run 
