@@ -12,5 +12,15 @@ jobs:
         name: Release-it
         # Include action by relative path to always use the current version
         uses: ./conventional-changelog-action
-        # with:
-        #   release-it-extra-args: --dry-run 
+        with:
+          release-it-extra-args: --dry-run --changelog
+  release-it:
+    name: Release-it
+    runs-on: unbuntu-24.04
+    # Run full release process for pushes to main
+    # if: ${{ github.ref == 'refs/heads/main') }} TODO restore
+    if: ${{ github.ref == 'refs/heads/1-define-initial-action') }}
+    steps:
+      -
+        name: Release-it
+        uses: ./conventional-changelog-action
