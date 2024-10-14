@@ -11,4 +11,4 @@ jobs:
       -
         name: Release-it
         # Include action by relative path to always use the current version
-        uses: ./core-action
+        uses: ./conventional-changelog
