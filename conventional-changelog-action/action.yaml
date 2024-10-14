@@ -13,5 +13,9 @@ inputs:
 runs:
   using: docker
   image: Dockerfile
+  entrypoint: bash -c
   args:
-    - "--ci ${{ inputs.release-it-extra-args }} --config ${{ inputs.config-path }}"
+    - "ls -la"
+    - "pwd"
+    - "git status"
+    - "cat ${{ inputs.config-path }}"
