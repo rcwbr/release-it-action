@@ -2,4 +2,3 @@
 FROM ghcr.io/rcwbr/release-it-docker-conventional-changelog:main
 
 COPY ./.release-it.json /.release-it.json
-CMD [ "--config", "/.release-it.json" ]
