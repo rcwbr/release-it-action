@@ -22,5 +22,8 @@ jobs:
     if: ${{ github.ref == 'refs/heads/1-define-initial-action' }}
     steps:
       -
+        name: Checkout
+        uses: actions/checkout@v4.1.7
+      -
         name: Release-it
         uses: ./conventional-changelog-action
