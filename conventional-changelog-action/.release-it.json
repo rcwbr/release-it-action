@@ -19,6 +19,10 @@
             "section": ":bug: Bug fixes"
           },
           {
+            "type": "build",
+            "section": ":package: Build"
+          },
+          {
             "type": "ci",
             "section": ":robot: CI/CD"
           },
@@ -27,16 +31,20 @@
             "section": ":page_facing_up: Docs"
           },
           {
-            "type": "test",
-            "section": ":test_tube: Tests"
+            "type": "perf",
+            "section": ":checkered_flag: Performance"
           },
           {
-            "type": "build",
-            "section": ":package: Build"
+            "type": "refactor",
+            "section": ":twisted_rightwards_arrows: Refactor"
           },
           {
             "type": "style",
             "section": ":broom: Style"
+          },
+          {
+            "type": "test",
+            "section": ":test_tube: Tests"
           },
           {
             "type": "chore",
