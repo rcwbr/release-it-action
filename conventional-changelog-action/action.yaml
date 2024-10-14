@@ -14,7 +14,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - "ls -la"
-    - "&& pwd"
-    - "&& git status"
-    - "&& cat ${{ inputs.config-path }}"
+    - "ls -la && pwd && git status && cat ${{ inputs.config-path }}"
