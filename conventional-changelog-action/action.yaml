@@ -13,7 +13,6 @@ inputs:
 runs:
   using: docker
   image: Dockerfile
-  entrypoint: bash -c
   args:
     - "ls -la"
     - "pwd"
