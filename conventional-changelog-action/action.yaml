@@ -14,4 +14,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - "${{ inputs.release-it-extra-args }} --config ${{ inputs.config-path }}"
+    - "--ci ${{ inputs.release-it-extra-args }} --config ${{ inputs.config-path }}"
