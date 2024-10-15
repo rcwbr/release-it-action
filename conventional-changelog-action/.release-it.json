@@ -1,6 +1,8 @@
 {
   "git": {
-    "commit": false
+    "commit": false,
+    "tag": true,
+    "tagName": "${version}"
   },
   "github": {
     "release": true
