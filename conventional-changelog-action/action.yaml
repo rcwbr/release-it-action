@@ -14,4 +14,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - "--changelog --ci --config ${{ inputs.config-path }}"
+    - "--ci --config ${{ inputs.config-path }}"
