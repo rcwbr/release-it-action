@@ -1,0 +1,8 @@
+name: Release-it
+author: Eric Weber (@rcwbr)
+description: Release automation using release-it
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - "--dry-run"
