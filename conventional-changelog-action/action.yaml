@@ -14,4 +14,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - "ls -la && whoami && pwd && git status && cat ${{ inputs.config-path }}"
+    - "git config --global --add safe.directory $GITHUB_WORKSPACE && ls -la && whoami && pwd && git status && cat ${{ inputs.config-path }}"
