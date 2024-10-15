@@ -2,5 +2,3 @@
 FROM ghcr.io/rcwbr/release-it-docker-conventional-changelog:main
 
 COPY ./.release-it.json /.release-it.json
-USER root
-ENTRYPOINT [ "bash", "-c" ]
