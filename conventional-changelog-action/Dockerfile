@@ -3,6 +3,5 @@ FROM ghcr.io/rcwbr/release-it-docker-conventional-changelog:main
 
 COPY ./.release-it.json /.release-it.json
 
-RUN git config --global --add safe.directory /github/workspace
 RUN npm install --global conventional-changelog-cli
-ENTRYPOINT [ "conventional-changelog", "--preset", "conventionalcommits" ]
+ENTRYPOINT [ "bash", "-c", "git config --global --add safe.directory /github/workspace && conventional-changelog --preset conventionalcommits" ]
