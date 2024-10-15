@@ -31,3 +31,5 @@ jobs:
       -
         name: Release-it
         uses: ./conventional-changelog-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
