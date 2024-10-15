@@ -8,6 +8,8 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4.1.7
+        with:
+          fetch-depth: 0
       -
         name: Release-it
         # Include action by relative path to always use the current version
@@ -24,6 +26,8 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4.1.7
+        with:
+          fetch-depth: 0
       -
         name: Release-it
         uses: ./conventional-changelog-action
