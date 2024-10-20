@@ -1,0 +1,17 @@
+name: Release-it
+author: Eric Weber (@rcwbr)
+description: Release automation using release-it
+inputs:
+  release-it-extra-args:
+    description: Extra args to apply to the release-it command
+    required: false
+    default: ""
+  config-path:
+    description: Path to the release-it config file
+    required: false
+    default: /.release-it.json
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - "--ci --config ${{ inputs.config-path }} ${{ inputs.release-it-extra-args }}"
