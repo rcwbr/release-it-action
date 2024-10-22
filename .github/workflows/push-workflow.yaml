@@ -2,6 +2,6 @@ name: Push workflow
 on: push
 jobs:
   release-it-workflow:
-    uses: ./release-it-workflow.yaml
+    uses: ./.github/workflows/release-it-workflow.yaml
     with:
       release-it-action: ./conventional-changelog-action
