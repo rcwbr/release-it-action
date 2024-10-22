@@ -1,0 +1,9 @@
+name: Push workflow
+on: push
+jobs:
+  release-it-workflow:
+    permissions:
+      contents: write
+    uses: ./.github/workflows/release-it-workflow.yaml
+    # with:
+    #   release-it-action: ./conventional-changelog-action
