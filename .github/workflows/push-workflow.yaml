@@ -3,5 +3,5 @@ on: push
 jobs:
   release-it-workflow:
     uses: ./.github/workflows/release-it-workflow.yaml
-    with:
-      release-it-action: ./conventional-changelog-action
+    # with:
+    #   release-it-action: ./conventional-changelog-action
