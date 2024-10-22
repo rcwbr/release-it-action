@@ -1,38 +1,7 @@
 name: Push workflow
-on: [push]
+on: push
 jobs:
-  release-it-dry-run:
-    name: Release-it dry-run
-    runs-on: ubuntu-24.04
-    steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v4.1.7
-        with:
-          fetch-depth: 0
-      -
-        name: Release-it
-        # Include action by relative path to always use the current version
-        uses: ./conventional-changelog-action
-        with:
-          release-it-extra-args: --changelog
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  release-it:
-    name: Release-it
-    runs-on: ubuntu-24.04
-    permissions:
-      contents: write
-    # Run full release process for pushes to main
-    if: ${{ github.ref == 'refs/heads/main' }}
-    steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v4.1.7
-        with:
-          fetch-depth: 0
-      -
-        name: Release-it
-        uses: ./conventional-changelog-action
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  release-it-workflow:
+    uses: ./release-it-workflow.yaml
+    with:
+      release-it-action: ./conventional-changelog-action
