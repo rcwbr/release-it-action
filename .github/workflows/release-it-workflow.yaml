@@ -3,7 +3,7 @@ on:
     inputs:
       release-it-action:
         description: 'The release it action to use'
-        default: 'rcwbr/release-it/action/conventional-changelog-action@0.1.0'
+        default: 'rcwbr/release-it-action/conventional-changelog-action@0.1.0'
         required: false
         type: string
       default-branch:
@@ -24,7 +24,7 @@ jobs:
       -
         name: Release-it
         # Include action by relative path to always use the current version
-        uses: ${{ inputs.release-it-action }}
+        uses: rcwbr/release-it-action/conventional-changelog-action@1-define-initial-action
         with:
           release-it-extra-args: --changelog
         env:
@@ -44,6 +44,6 @@ jobs:
           fetch-depth: 0
       -
         name: Release-it
-        uses: ${{ inputs.release-it-action }}
+        uses: rcwbr/release-it-action/conventional-changelog-action@1-define-initial-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
