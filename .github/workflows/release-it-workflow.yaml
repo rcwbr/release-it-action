@@ -24,7 +24,7 @@ jobs:
       -
         name: Release-it
         # Include action by relative path to always use the current version
-        uses: rcwbr/release-it-action/conventional-changelog-action@1-define-initial-action
+        uses: ${{ inputs.release-it-action }}
         with:
           release-it-extra-args: --changelog
         env:
@@ -44,6 +44,6 @@ jobs:
           fetch-depth: 0
       -
         name: Release-it
-        uses: rcwbr/release-it-action/conventional-changelog-action@1-define-initial-action
+        uses: ${{ inputs.release-it-action }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
